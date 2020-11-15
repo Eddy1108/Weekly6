@@ -15,8 +15,8 @@ void task3()
 	std::cin >> word1;
 
 	word3 = word2 = word1;
-	word2.at(0) = static_cast<char>(word2.at(0)) - 32;
-	for (int i = 0; i < word3.length(); i++)
+	word2.at(0) = static_cast<char>(word2.at(0)) - 32;	//Make first letter uppercase
+	for (int i = 0; i < word3.length(); i++)			//Make the whole word uppercase
 	{
 		word3.at(i) = word3.at(i) - 32;
 	}
@@ -32,7 +32,7 @@ void task3()
 		{
 			if (buffer.at(i - 1) == ' ' && buffer.at(i) != ' ')		//Found a word
 			{
-				tempWord = "";
+				tempWord = "";		//Reset tempWord
 				totalWords++;
 				for (int j = i; j < buffer.size(); j++)			//Save the word
 				{
@@ -45,11 +45,11 @@ void task3()
 					}
 					if (buffer.at(j) == ' ')
 
-						j = buffer.size();
+						j = buffer.size();	//find a space? end the for loop
 				}
 			}
 		}
 	}
 
-	std::cout << "\n\nTotal words scanned: " << totalWords << "\nTotal matching words: " << userWordsFound;
+	std::cout << "\n\nTotal words scanned: " << totalWords << "\nTotal matching words: " << userWordsFound << std::endl;
 }

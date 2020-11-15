@@ -66,7 +66,7 @@ void task2()
 
 	std::fstream file2("Task2.txt", std::ios::in);
 
-	for (int i = 0; i < students.size(); i++)
+	for (int i = 0; i < students.size(); i++)		//assign name and answer for each student
 	{
 		std::getline(file2, students.at(i).name);
 		//std::cout << students.at(i).name << std::endl;
